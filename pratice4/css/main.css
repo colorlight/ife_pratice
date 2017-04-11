@@ -1,0 +1,9 @@
+#gray-section{
+	width: 400px;
+	height: 200px;
+	background: #ccc;
+
+	position:absolute;
+	top:50%;
+	left:50%;
+}
