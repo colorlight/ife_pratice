@@ -1,0 +1,60 @@
+body{
+	min-width: 720px;
+}
+
+header{
+	background: #eee;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+header div{
+	width: 90%;
+	margin: 0 auto;
+	background: #e2dfdf;
+}
+
+.logo img{
+	vertical-align: bottom;
+}
+
+.logo span{
+	line-height: 80px;
+	font-size: 20px;
+	font-family: Helvetica;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+
+.navbar{
+	margin-top: 15px;	
+	float: right;
+	margin-right: 10px;
+}
+
+.navbar li{
+	display: block;
+	float: left;
+	/*padding:10px 10px;*/
+}
+.navbar a{
+	text-decoration: none;
+	color: black;
+	display:block;
+	padding: 10px 15px;
+}
+
+.navbar a:hover{
+	background: #eef;
+}
