@@ -1,10 +1,8 @@
 body{
 	min-width: 720px;
+	background: black;
 }
 
-header{
-	background: #eee;
-}
 
 ul{
 	list-style: none;
@@ -12,17 +10,17 @@ ul{
 	padding:0;
 }
 
-header div{
+header .head-wrapper{
 	width: 90%;
 	margin: 0 auto;
 	background: #e2dfdf;
 }
 
-.logo img{
+.head-wrapper img{
 	vertical-align: bottom;
 }
 
-.logo span{
+.head-wrapper span{
 	line-height: 80px;
 	font-size: 20px;
 	font-family: Helvetica;
@@ -48,6 +46,7 @@ header div{
 	float: left;
 	/*padding:10px 10px;*/
 }
+
 .navbar a{
 	text-decoration: none;
 	color: black;
@@ -57,4 +56,29 @@ header div{
 
 .navbar a:hover{
 	background: #eef;
+}
+
+.wrapper{
+	width:90%;
+	background: #eee;
+}
+
+#main-wrapper{
+	/*overflow: hidden;*/
+	margin: 0 auto;
+}
+article{
+	background: white;
+}
+
+aside{
+	width: 500px;
+	float: right;
+	margin-top: 20px;
+}
+
+.article-set{
+	margin-top: 20px;
+	margin-right: 550px;
+	margin-left : 20px;
 }
