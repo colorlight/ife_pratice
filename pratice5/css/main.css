@@ -1,6 +1,8 @@
 body{
 	min-width: 720px;
 	background: black;
+	font-family: "黑体";
+	font-size: 14px;
 }
 
 
@@ -67,18 +69,80 @@ header .head-wrapper{
 	/*overflow: hidden;*/
 	margin: 0 auto;
 }
+
+#main-wrapper::before{
+	content: "";
+	display: table;
+	margin-bottom:20px;
+}
+
 article{
 	background: white;
 }
 
 aside{
-	width: 500px;
+	width: 350px;
 	float: right;
 	margin-top: 20px;
+	margin-right: 20px;
+	background: white;
+	padding: 20px;
+
 }
+
+
+
+#aside-title{
+	border-left: 2px solid #ccc;
+	padding-left: 10px;
+	margin: 0 auto;
+	margin-left: 10px;
+	/*text-align: center;*/
+}
+
+
+/*#aside-title::before{*/
+	/*content:"";
+	display:inline-block;
+	width:10px;
+	height:40px;
+	margin-right: 10px;
+	background: #dd182b;*/
+	/*vertical-align: bottom;*/
+	/*position: relative;
+	top: 10px;*/
+/*}*/
+
 
 .article-set{
 	margin-top: 20px;
-	margin-right: 550px;
+	margin-right: 430px;
 	margin-left : 20px;
+}
+
+.note{
+	float: left;
+}
+
+.enter{
+	float: right;
+}
+
+#main-wrapper button{
+	overflow: auto;
+}
+
+.input-message{
+	display: inline-block;
+	width: 30%;
+	text-align: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+#input-remind{
+	margin-top: 10px;
+	margin-left: 37.5%;
+	color: gray;
+	font-size: 13px;
 }

@@ -6,13 +6,13 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="bookmark" href="http://ife.baidu.com/2016/asset/img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="http://ife.baidu.com/2016/asset/img/favicon.ico" type="image/x-icon">
+	<!-- <link rel="icon" href="http://ife.baidu.com/2016/asset/img/favicon.ico" type="image/x-icon"> -->
 </head>
 <body>
 	<header>
 		<div class="head-wrapper">
 			<nav>
-				<ul class="navbar group">
+				<ul class="navbar">
 					<li><a href="#">导航仪</a></li>
 					<li><a href="#">方向盘</a></li>
 					<li><a href="#">陀螺仪</a></li>
@@ -26,9 +26,34 @@
 		</div>
 	</header>
 	
-	<div id="main-wrapper" class="wrapper group">
+	<div id="main-wrapper" class="wrapper ">
 		<aside>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa possimus porro amet ea ab, vitae nobis nisi accusantium asperiores distinctio officiis consequatur saepe explicabo natus consequuntur, voluptas error ipsam tempora.
+			<h3 id="aside-title"><span>自己的小窝什么时候可以买到啊</span></h3>
+			<div class="input-part">
+				<div>
+					<div class="input-message">请输入邮箱地址</div>
+					<input class="input-box" type="text" placeholder="这是一个文本输入框">
+				</div>
+				<div id="input-remind">邮箱的地址请按要求输入</div>
+				<div>
+					<div class="input-message">请输入密码</div>
+					<input class="input-box" type="text" placeholder="这是一个文本输入框">
+				</div>
+				<div>
+					<div class="input-message">请重复输入密码</div>
+					<input class="input-box" type="text" placeholder="这是一个文本输入框">
+				</div>
+				<div id="input-remind">密码申请为16位数字</div>
+				<div>
+					<div class="input-message">性别</div>
+					<input type="radio" name="sex" id="male" checked="checked">
+					<label for="male">男</label>
+					<input type="radio" name="sex" id="female">
+					<label for="female">女</label>
+				</div>	
+
+			</div>
+			<button>确认提交</button>
 		</aside>
 		<div class="article-set">
 			<article>
