@@ -12,6 +12,10 @@ ul{
 	padding:0;
 }
 
+a{
+	text-decoration: none;
+}
+
 header .head-wrapper{
 	width: 90%;
 	margin: 0 auto;
@@ -140,9 +144,53 @@ aside{
 	margin-right: 20px;
 }
 
+.input-box{
+	vertical-align: bottom;
+	width: 55%;
+}
+
 #input-remind{
 	margin-top: 10px;
 	margin-left: 37.5%;
 	color: gray;
 	font-size: 13px;
+}
+
+.input-part textarea{
+	/*margin-top: 10px;*/
+	height: 100px;
+	width: 55%;
+}
+
+#descript{
+	margin-top: 0px;
+	vertical-align: top;
+}
+
+#descript-div{
+	margin-top: 20px;
+}
+
+.submit-button{
+	background: #3355D0;
+	width: 100%;
+	color: #fff;
+	border-radius: 5px;
+	border:none;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.article-set h3, .article-set h4, 
+.article-set h5{
+	color: gray;
+}
+
+.text-indent{
+	text-indent: 1em;	
+}
+
+.text-indent a{
+	color: #fff;
+	background: #3355D0;
 }
