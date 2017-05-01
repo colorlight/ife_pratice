@@ -1,3 +1,7 @@
+div{
+	background: white;
+}
+
 .black{
 	width: 1000px;
 	height: 500px;
@@ -34,4 +38,7 @@
 	float: left;
 	margin-left: 2px
 }
+
+.background-blue{
+	background: blue;
 }
