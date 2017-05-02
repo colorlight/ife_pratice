@@ -1,7 +1,7 @@
 var buttonSet =  document.getElementsByClassName('button-set')[0];
 var preButton = buttonSet.firstElementChild,
-	midButton = preButton.nextElementSibling,
-	lastButton = buttonSet.lastElementChild;
+	inButton = preButton.nextElementSibling,
+	postButton = buttonSet.lastElementChild;
 
 
 function display(i,sets){
@@ -22,84 +22,104 @@ function display(i,sets){
 }
 
 preButton.addEventListener('click', function(){
-	var divs = document.getElementsByTagName('div');
 
+	var root = document.body.children[1];
+	var order = null;
 
+	/*这个是没有判断根节点，而是判断的左右子节点的合法性，不是很简便*/
+	// function preOrder(root){
+	// 	var order = [];
+
+	// 	(function preTraverse(ele){
+	// 		var left = ele.firstElementChild;
+	// 		var right = ele.lastElementChild;
+
+	// 		order.push(ele);
+	// 		if(left){
+	// 			preTraverse(left);
+	// 		}
+	// 		if(right){
+	// 			preTraverse(right);
+	// 		}
+	// 	})(root);
+		
+	// 	return order;
+	// }
+
+	/*判断根节点的合法性*/ 
 	function preOrder(root){
 		var order = [];
+		function preTraversal(root){
 
-
-		(function preTraverse(ele){
-			var left = ele.firstElementChild;
-			var right = ele.lastElementChild;
-
-			order.push(ele);
-			if(left){
-				preTraverse(left);
+			if(!root){
+				return 
 			}
-			if(right){
-				preTraverse(right);
-			}
-		})(root);
-
-		// (function display(){
-		// 	order[0].classList.add('background-blue');
-		// 	for(var i = 1, ele; ele = order[i]; i++){
-		// 		setTimeout(function(i,order,ele){
-		// 			order[i-1].classList.remove('background-blue');
-		// 			ele.classList.add('background-blue');
-		// 		},1000,i,order,ele) 
-		// 	}
-		// })();
-		display(0,order);
-	
+			/*注意声明的顺序一定要等到判断root不是null*/ 
+			var leftSon = root.firstElementChild;
+			var rightSon = root.lastElementChild;
+			
+			
+			order.push(root);
+			preTraversal(leftSon);
+			preTraversal(rightSon);
+		}
+		preTraversal(root);
+		return order;
 	}
 
+	order = preOrder(root);
+	display(0, order);
 
-		var root = document.body.children[1];
-		preOrder(root);
 },false);
 
-midButton.addEventListener('click', function(){
-	var divs = document.getElementsByTagName('div');
+inButton.addEventListener('click', function(){
 
-	function midOrder(root){
+	var root = document.body.children[1];
+	var order = null;
+
+	function inOrder(root){
 		var order = [];
-		(function midTraverse(ele){
-
-			if(!ele){
+		function inTraversal(root){
+			if(!root){
 				return;
 			}
+			var leftSon = root.firstElementChild;
+			var rightSon = root.lastElementChild;
 
-			var left = ele.firstElementChild;
-			var right = ele.lastElementChild;
-
-			if(left){
-				midTraverse(left);
-				order.push(left);
-			}
-
-			order.push(right);
-
-			order.push(ele);
-			if(right){
-				midTraverse(right);
-				order.push(right);
-			}
-		})(root);
-
-		// (function display(){
-		// 	order[0].classList.add('background-blue');
-		// 	for(var i = 1, ele; ele = order[i]; i++){
-		// 		setTimeout(function(i,order,ele){
-		// 			order[i-1].classList.remove('background-blue');
-		// 			ele.classList.add('background-blue');
-		// 		},1000,i,order,ele) 
-		// 	}
-		// })();
-		display(0,order);
+			inTraversal(leftSon);
+			order.push(root);
+			inTraversal(rightSon);
+		}
+		inTraversal(root);
+		return order;
 	}
 
-		var root = document.body.children[1];
-		midOrder(root);
+	order = inOrder(root);
+	display(0,order);
 },false);
+
+
+postButton.addEventListener('click', function(){
+	var root = document.body.children[1];
+	var order = null;
+
+	function postOrder(root){
+		var order = [];
+		function postTraversal(root){
+			if(!root)
+				return;
+			var leftSon = root.firstElementChild;
+			var rightSon = root.lastElementChild;
+
+			postTraversal(leftSon);
+			postTraversal(rightSon);
+			order.push(root);
+		}
+		postTraversal(root);
+		return order;
+	}
+
+	order = postOrder(root);
+	display(0,order);
+
+},false)
